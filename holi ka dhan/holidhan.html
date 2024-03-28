@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code With Aayush Happy Choti Holi 2024</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+          <strong><a class="navbar-brand text-white" href="#">
+            <div class="logo">Happy Choti Holi</div>
+           </a></strong>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+      <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="btn btn-light" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+           
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        
+      </div>
+      </div>
+    </nav>
+
+    <div class="myinfo">
+        <!-- Add a container for the moving text -->
+      <!-- <div class="moving-text">Happy Choti Holi!</div> -->
+      <h1 class="holi">Hey there!</h1>
+      <h1>I Am Aayush Gupta</h1>
+      <p>Holika Dahan is the time to be understanding and love each other. It is the festival when you leave behind negativity and bring in happiness.<br> <h2 id="typedText" class="hue"></h2></p>
+
+      <a href="#" class="btn btn-danger mr-3 ">contact</a>
+      <a href="#" class="btn btn-light">Login</a>
+  </div>
+
+  <video autoplay loop play-inline muted>
+      <source src="Holika Dahan - Holi Festival.mp4">
+      video is not load
+  </video>
+  <audio controls autoplay loop>
+    <source src="Happy-Holi.mp3">
+  </audio>
+  <!-- <script>
+    const text = "Happy Choti Holi";
+    let index = 0;
+    const speed = 100;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typedText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+      }
+    }
+
+    window.onload = function() {
+      typeEffect();
+    };
+  </script> -->
+  <script>
+    const text = ".Happy Choti Holi";
+    let index = 0;
+    let isTyping = true;
+    let speed = 200; // Adjust typing speed as needed
+    const typedTextElement = document.getElementById("typedText");
+
+    function typeEffect() {
+      if (isTyping) {
+        typedTextElement.innerHTML += text.charAt(index);
+        index++;
+        if (index >= text.length) {
+          isTyping = false;
+          setTimeout(eraseEffect, 1000); // Wait for 1 second before erasing
+        } else {
+          setTimeout(typeEffect, speed);
+        }
+      }
+    }
+
+    function eraseEffect() {
+      if (!isTyping) {
+        typedTextElement.innerHTML = text.substring(0, index);
+        index--;
+        if (index <= 0) {
+          isTyping = true;
+          setTimeout(typeEffect, 1000); // Wait for 1 second before typing again
+        } else {
+          setTimeout(eraseEffect, speed);
+        }
+      }
+    }
+
+    window.onload = function() {
+      typeEffect();
+    };
+  </script>
+  
+</body>
+</html>
